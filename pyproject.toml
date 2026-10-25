@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oryvia-launcher"
+version = "2026.10.24.3"
+description = "Launcher for a separately authorized ORYVIA Unix workstation package"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {file = "LICENSE"}
+authors = [{name = "Yue Dong"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+oryvia = "oryvia_launcher:main"
+oryvia-launcher = "oryvia_launcher:main"
+
+[tool.setuptools]
+py-modules = ["oryvia_launcher"]
